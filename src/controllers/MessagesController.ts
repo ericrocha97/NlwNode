@@ -15,7 +15,6 @@ class MessagesController {
     return response.json(message);
   }
 
-  // /messages/idDoUsuario
   async showByUser(request: Request, response: Response) {
     const { id } = request.params;
 

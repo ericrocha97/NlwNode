@@ -76,7 +76,6 @@ io.on("connect", (socket) => {
       socket_id,
     });
 
-    // Melhorias
   });
 
   socket.on("disconnect", async () => {
