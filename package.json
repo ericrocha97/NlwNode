@@ -4,12 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "tsnd src/server.ts",
+    "start": "node dist/server.js",
+    "dev": "tsnd --transpile-only --ignore-watch node_modules src/server.ts",
+    "build": "tsc",
     "typeorm": "tsnd node_modules/typeorm/cli.js"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "pg": "^8.6.0",
     "reflect-metadata": "^0.1.13",
     "socket.io": "^4.0.1",
     "socket.io-client": "^4.0.1",
