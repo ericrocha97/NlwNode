@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import { createServer } from "http";
 import { Server, Socket } from "socket.io";
 import path from "path";
@@ -24,10 +25,11 @@ app.get("/pages/admin", (request, response) => {
 const http = createServer(app);
 const io = new Server(http);
 
+
 io.on("connection", (socket: Socket) => {
 
 });
-
+app.use(cors())
 app.use(express.json());
 
 app.use(routes);
