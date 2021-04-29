@@ -89,7 +89,7 @@
   const chat = document.getElementById("chat_help");
 
   function onLoad() {
-    fetch(`${process.env.API_URL}/settings/admin`).then((result) =>
+    fetch(`https://nlw5-chat.herokuapp.com/settings/Admin`).then((result) =>
       result.json().then((response) => {
         const buttonSupport = document.getElementById("btn_support");
         if (!response.chat) {
